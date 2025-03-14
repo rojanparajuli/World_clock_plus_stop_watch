@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #11aaaf, #b2461f, #fdef2d);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+}
+
+.clock-container, .stopwatch-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.clock {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.city {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.city:hover {
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#stopwatch {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .clock {
+        grid-template-columns: 1fr;
+    }
+}
