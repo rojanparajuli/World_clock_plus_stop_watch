@@ -8,25 +8,51 @@
 </head>
 <body>
     <div class="container">
-        <div class="clock-container">
-            <h1>World Clock</h1>
-            <div class="clock">
-                <div class="city">
-                    <p>Kathmandu</p>
-                    <h2 id="kathmanduClock"></h2>
+        <h1>World Clocks</h1>
+        
+        <div class="clocks-container">
+            <div class="city-clock">
+                <h2>Kathmandu</h2>
+                <div class="clock-face" id="kathmanduClockFace">
+                    <div class="hand hour-hand" id="kathmanduHour"></div>
+                    <div class="hand minute-hand" id="kathmanduMinute"></div>
+                    <div class="hand second-hand" id="kathmanduSecond"></div>
+                    <div class="center-dot"></div>
                 </div>
-                <div class="city">
-                    <p>Sydney</p>
-                    <h2 id="sydneyClock"></h2>
+                <p id="kathmanduClock"></p>
+            </div>
+
+            <div class="city-clock">
+                <h2>Sydney</h2>
+                <div class="clock-face" id="sydneyClockFace">
+                    <div class="hand hour-hand" id="sydneyHour"></div>
+                    <div class="hand minute-hand" id="sydneyMinute"></div>
+                    <div class="hand second-hand" id="sydneySecond"></div>
+                    <div class="center-dot"></div>
                 </div>
-                <div class="city">
-                    <p>New York</p>
-                    <h2 id="newYorkClock"></h2>
+                <p id="sydneyClock"></p>
+            </div>
+
+            <div class="city-clock">
+                <h2>New York</h2>
+                <div class="clock-face" id="newYorkClockFace">
+                    <div class="hand hour-hand" id="newYorkHour"></div>
+                    <div class="hand minute-hand" id="newYorkMinute"></div>
+                    <div class="hand second-hand" id="newYorkSecond"></div>
+                    <div class="center-dot"></div>
                 </div>
-                <div class="city">
-                    <p>Delhi</p>
-                    <h2 id="delhiClock"></h2>
+                <p id="newYorkClock"></p>
+            </div>
+
+            <div class="city-clock">
+                <h2>Delhi</h2>
+                <div class="clock-face" id="delhiClockFace">
+                    <div class="hand hour-hand" id="delhiHour"></div>
+                    <div class="hand minute-hand" id="delhiMinute"></div>
+                    <div class="hand second-hand" id="delhiSecond"></div>
+                    <div class="center-dot"></div>
                 </div>
+                <p id="delhiClock"></p>
             </div>
         </div>
 

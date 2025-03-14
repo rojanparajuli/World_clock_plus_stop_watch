@@ -2,89 +2,103 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #11aaaf, #b2461f, #fdef2d);
-    color: #fff;
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    overflow-y: auto;
+    padding: 9px;
 }
 
 .container {
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1000px;
 }
 
-.clock-container, .stopwatch-container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px 40px;
+.clocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.city-clock {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    margin: 20px 0;
-    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 200px;
 }
 
-h1 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.clock-face {
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px auto;
 }
 
-.clock {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
+.hand {
+    position: absolute;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
 }
 
-.city {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
+.hour-hand {
+    width: 6px;
+    height: 35px;
+    background: white;
 }
 
-.city:hover {
-    transform: scale(1.05);
+.minute-hand {
+    width: 4px;
+    height: 50px;
+    background: #ffcc00;
 }
 
-p {
+.second-hand {
+    width: 2px;
+    height: 60px;
+    background: red;
+}
+
+.center-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stopwatch-container {
+    margin-top: 30px;
+}
+
+#startPause {
+    background: #ffcc00;
+    color: black;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
-}
-
-h2 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-#stopwatch {
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 25px;
-    font-size: 18px;
     border: none;
-    border-radius: 50px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
-    color: white;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.5);
 }
 
-button:hover {
-    background: linear-gradient(to right, #ff4b2b, #ff416c);
-    transform: scale(1.1);
+#startPause:hover {
+    background: #ffaa00;
+    box-shadow: 0 6px 12px rgba(255, 170, 0, 0.6);
 }
 
-@media (max-width: 600px) {
-    .clock {
-        grid-template-columns: 1fr;
-    }
+#startPause:active {
+    transform: scale(0.95);
 }
